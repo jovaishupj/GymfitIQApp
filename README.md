@@ -1,18 +1,72 @@
-# React + Vite
+<img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/8def6649-81c5-457a-8204-73214f80f9db" />
+ GymFitIQ**
+**
+Live Demo: https://gymfit-iq-app.vercel.app/
+<img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/80548e29-719d-47c1-87fb-d3baf9d22e3c" />
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Type: Fitness & Exercise Discovery Web App
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Built With: React, Material UI, Redux Toolkit, Framer Motion
 
-## React Compiler
+API: ExerciseDB via RapidAPI
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+**Features:
+**
+Browse exercises by body part
 
-Note: This will impact Vite dev & build performances.
+View exercise details and instructions
 
-## Expanding the ESLint configuration
+Exercise images and categories
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Responsive modern dark UI
+
+Smooth animations and navigation
+
+State Management: Redux Toolkit + React Redux
+
+Routing: React Router
+
+UI: Material UI (MUI)
+
+Animations: Framer Motion
+
+Carousel: Swiper
+
+**📦 Dependencies**
+
+@emotion/react — ^11.14.0
+
+@emotion/styled — ^11.14.1
+
+@mui/material — ^7.3.9
+
+@reduxjs/toolkit — ^2.12.0
+
+framer-motion — ^13.1.1
+
+react — ^19.2.4
+
+react-dom — ^19.2.4
+
+react-redux — ^9.3.0
+
+react-router-dom — ^7.0.0
+
+swiper — ^12.1.3
+
+🚀 Run Locally
+
+Clone the repository
+
+Run npm install
+
+Add RapidAPI credentials to .env
+
+Run npm run dev
+
+Open the local Vite URL
+
+**🌐 Live**
+
+GymFitIQ: https://gymfit-iq-app.vercel.app/
