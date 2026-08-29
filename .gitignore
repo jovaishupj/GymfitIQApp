@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+
+node_modules/
+.env
+.env.local
+dist/
+build/
+.vscode/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
