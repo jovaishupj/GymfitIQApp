@@ -1,5 +1,9 @@
 # 💪 GymFitIQ
 
+<img width="1919" height="912" alt="image" src="https://github.com/user-attachments/assets/2bd6f346-2507-403b-bf44-15711c30b1d3" />
+<img width="1895" height="697" alt="image" src="https://github.com/user-attachments/assets/87acd06a-7747-495a-aaf3-c20330482fd4" />
+<img width="1914" height="851" alt="image" src="https://github.com/user-attachments/assets/8beccadb-2e65-4a55-b145-f02b3308c159" />
+
 - **Live Demo:** https://gymfit-iq-app.vercel.app/
 - **Type:** Fitness & Exercise Discovery Web App
 - **Built With:** React, Material UI, Redux Toolkit, Framer Motion
