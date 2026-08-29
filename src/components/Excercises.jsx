@@ -20,13 +20,20 @@ const Excercises = () => {
       }
       let exercisesData = [];
       if (bodyPart === 'All' || bodyPart === 'all') {
-          console.log("🔥 BASE_URL FROM VITE:", BASE_URL);
-console.log("🔥 ENV:", import.meta.env);
-        exercisesData = await fetchData(`${BASE_URL}/exercises?limit=1300&offset=0`);
+        console.log("🔥 BASE_URL FROM VITE:", BASE_URL);
+        console.log("🔥 ENV:", import.meta.env);
+        const apiUrl = `${BASE_URL}/exercises?limit=1300&offset=0`;
+
+        console.log("🔥 EXERCISES API URL:", apiUrl);
+
+        exercisesData = await fetchData(apiUrl);
+        //exercisesData = await fetchData(`${BASE_URL}/exercises?limit=1300&offset=0`);
       } else {
-        exercisesData = await fetchData(
-          `${BASE_URL}/exercises/bodyPart/${bodyPart}?limit=1300&offset=0`
-        );
+        const apiUrl = `${BASE_URL}/exercises/bodyPart/${bodyPart}?limit=1300&offset=0`;
+
+        console.log("🔥 BODY PART API URL:", apiUrl);
+
+        exercisesData = await fetchData(apiUrl);
       }
       dispatch(setExercises(exercisesData));
       setInitialMount(false);

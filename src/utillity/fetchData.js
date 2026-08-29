@@ -6,6 +6,8 @@ export const fetchData = async (URL) => {
       "x-rapidapi-host": import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_HOST,
     },
   });
+  console.log(" fetchData RESPONSE URL:", response.url);
+  console.log(" fetchData STATUS:", response.status);
 
   if (!response.ok) {
     const errorData = await response.json();
