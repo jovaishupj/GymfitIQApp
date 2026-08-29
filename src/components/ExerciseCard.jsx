@@ -3,20 +3,23 @@ import { Link } from 'react-router-dom';
 import { Button, Stack, Typography, Box } from '@mui/material';
 import { motion } from 'framer-motion';
 
+
 const ExerciseCard = ({ exercise }) => {
   const [imageSrc, setImageSrc] = useState('');
   const RAPIDAPI_KEY = import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_KEY;
-
+ const BASE_URL = import.meta.env.VITE_EXERCISE_DB_BASE_URL;
+   const HOST=import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_HOST;
   useEffect(() => {
-    const fetchImage = async () => {
+    const fetchImages = async () => {
       try {
-        const url = `https://exercisedb.p.rapidapi.com/image?exerciseId=${exercise.id}&resolution=180`;
+        const url = `${BASE_URL}/image?exerciseId=${exercise.id}&resolution=180`;
         const response = await fetch(url, {
           headers: {
             'x-rapidapi-key': RAPIDAPI_KEY,
-            'x-rapidapi-host': 'exercisedb.p.rapidapi.com',
+            'x-rapidapi-host': HOST,
           },
         });
+         
         if (response.ok) {
           const blob = await response.blob();
           setImageSrc(URL.createObjectURL(blob));
@@ -25,7 +28,7 @@ const ExerciseCard = ({ exercise }) => {
         console.error('Failed to fetch image:', error);
       }
     };
-    fetchImage();
+    fetchImages();
   }, [exercise.id, RAPIDAPI_KEY]);
 
   return (

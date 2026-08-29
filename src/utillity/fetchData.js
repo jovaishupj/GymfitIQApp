@@ -3,7 +3,7 @@ export const fetchData = async (URL) => {
     method: "GET",
     headers: {
       "x-rapidapi-key": import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_KEY,
-      "x-rapidapi-host": "exercisedb.p.rapidapi.com",
+      "x-rapidapi-host": import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_HOST,
     },
   });
 

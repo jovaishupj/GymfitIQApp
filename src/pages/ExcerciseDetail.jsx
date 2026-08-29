@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Box, Button, Stack, Typography } from '@mui/material';
-import { fetchData } from '../utillity/fetchData';
+import { fetchData} from '../utillity/fetchData';
 import { motion } from 'framer-motion';
 
 const ExcerciseDetail = () => {
@@ -11,6 +11,7 @@ const ExcerciseDetail = () => {
   const [imageSrc, setImageSrc] = useState('');
   const BASE_URL = import.meta.env.VITE_EXERCISE_DB_BASE_URL;
   const RAPIDAPI_KEY = import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_KEY;
+  const HOST=import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_HOST;
 
   useEffect(() => {
     const fetchExerciseData = async () => {
@@ -25,15 +26,16 @@ const ExcerciseDetail = () => {
   }, [id, BASE_URL]);
 
   useEffect(() => {
-    const fetchImage = async () => {
+    const fetchImages = async () => {
       try {
-        const url = `https://exercisedb.p.rapidapi.com/image?exerciseId=${id}&resolution=180`;
+        const url = `${BASE_URL}/image?exerciseId=${id}&resolution=180`;
         const response = await fetch(url, {
           headers: {
             'x-rapidapi-key': RAPIDAPI_KEY,
-            'x-rapidapi-host': 'exercisedb.p.rapidapi.com'
+            'x-rapidapi-host': HOST
           }
         });
+      
         if (response.ok) {
           const blob = await response.blob();
           setImageSrc(URL.createObjectURL(blob));
@@ -42,7 +44,7 @@ const ExcerciseDetail = () => {
         console.error('Failed to fetch image:', error);
       }
     };
-    fetchImage();
+    fetchImages();
   }, [id, RAPIDAPI_KEY]);
 
   return (
