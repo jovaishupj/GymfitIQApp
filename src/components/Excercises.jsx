@@ -20,6 +20,8 @@ const Excercises = () => {
       }
       let exercisesData = [];
       if (bodyPart === 'All' || bodyPart === 'all') {
+          console.log("🔥 BASE_URL FROM VITE:", BASE_URL);
+console.log("🔥 ENV:", import.meta.env);
         exercisesData = await fetchData(`${BASE_URL}/exercises?limit=1300&offset=0`);
       } else {
         exercisesData = await fetchData(

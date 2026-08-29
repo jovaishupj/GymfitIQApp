@@ -9,10 +9,14 @@ const ExerciseCard = ({ exercise }) => {
   const RAPIDAPI_KEY = import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_KEY;
  const BASE_URL = import.meta.env.VITE_EXERCISE_DB_BASE_URL;
    const HOST=import.meta.env.VITE_EXERCISE_DB_RAPIDAPI_HOST;
+   
   useEffect(() => {
     const fetchImages = async () => {
       try {
+        console.log("🔥 BASE_URL FROM VITE:", BASE_URL);
+console.log("🔥 ENV:", import.meta.env);
         const url = `${BASE_URL}/image?exerciseId=${exercise.id}&resolution=180`;
+          console.log("🔥 url FROM VITE:", url);
         const response = await fetch(url, {
           headers: {
             'x-rapidapi-key': RAPIDAPI_KEY,
