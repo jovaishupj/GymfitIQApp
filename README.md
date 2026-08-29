@@ -1,7 +1,9 @@
-<img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/8def6649-81c5-457a-8204-73214f80f9db" />
  GymFitIQ**
 **
 Live Demo: https://gymfit-iq-app.vercel.app/
+
+<img width="1919" height="881" alt="image" src="https://github.com/user-attachments/assets/8def6649-81c5-457a-8204-73214f80f9db" />
+
 <img width="1919" height="867" alt="image" src="https://github.com/user-attachments/assets/80548e29-719d-47c1-87fb-d3baf9d22e3c" />
 
 
